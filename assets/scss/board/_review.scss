@@ -1,0 +1,140 @@
+.review-list {
+  overflow: hidden;
+  .item {
+    display: block;
+    @include column(3, 15, 15);
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 0.8em;
+    transition: background 0.25s;
+    &:hover {
+      background: #f5f5f5;
+    }
+    &.empty-result {
+      float: none;
+      width: auto;
+      padding: 3em 0;
+      border-top: 1px solid #ccc;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+      border-radius: 0;
+      text-align: center;
+    }
+  }
+  .category {
+    margin-bottom: 0.5rem;
+    line-height: 1.2rem;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: $color-main;
+    img {
+      width: 1rem;    
+      margin-right: 0.2rem;
+      vertical-align: middle;
+    }
+    .category-text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .title {
+    @include ellipsis1;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px dashed #b2b2b2;
+    font-weight: 500;
+    color: #222;
+  }
+  .cont {
+    @include elss(2, 1.5);
+    min-height: 3em;
+    font-size: 0.85em;
+    font-weight: 400;
+    word-break: break-all;
+  }
+  .review-info-area {
+    overflow: hidden;
+    margin-top: 0.2em;
+  }
+  .date {
+    float: left;
+    line-height: 2.3rem;
+    font-size: 0.75em;
+    color: #222;
+  }
+  .reply-count {
+    float: right;
+    width: 2.3rem;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    text-align: center;
+    background: #e5e5e5;
+    font-size: 0.8em;
+    border-radius: 50%;
+  }
+}
+
+.inc-review {
+  .btn-area {
+    margin-top: 2.5em;
+    text-align: center;
+    .btn {
+      display: inline-block;
+      width: 12.8em;
+      height: 3em;
+      line-height: calc(3em - 2px);
+      border: 1px solid $color-main;
+      background: $color-main;
+      font-weight: 400;
+      color: #fff;
+      border-radius: 1.5em;
+      transition: background 0.25s, color 0.25s;
+      &:hover {
+        background: #fff;
+        color: $color-main;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  .review-list .item {
+    padding: 1.5em 1em;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .review-list {
+    .item {
+      @include column(2, 10, 10, -1);
+    }
+  }
+
+  .inc-review {
+    .review-list .item:nth-child(3) {
+      display: none;
+    }
+    .btn-area {
+      margin-top: 1.5em;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .review-list {
+    .item {
+      @include column(1, 10, 0, -1);
+      padding: 0.6em 1em;
+    }
+  }
+
+  .inc-review {
+    .btn-area .btn {
+      font-size: 0.85em;
+    }
+  }
+}

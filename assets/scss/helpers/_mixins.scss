@@ -1,0 +1,137 @@
+@mixin freeFix($property, $values){
+    -webkit-#{$property} : $values;
+    -moz-#{$property} : $values;
+    -ms-#{$property} : $values;
+    -o-#{$property} : $values;
+    #{$property} : $values;
+}
+
+@mixin createBtn($color){
+    background-color:$color;
+    border-color:$color;
+    &:hover, &:active, &:focus{
+        background-color: $color - ($color / 10);
+    }
+}
+//media min-width
+@mixin mediaMin($value){
+    @media screen and (min-width:#{$value}px){
+        @content;
+    }
+}
+//media max-width
+@mixin mediaMax($value){
+    @media screen and (max-width:#{$value}px){
+        @content;
+    }
+}
+//media min-width and max-width
+@mixin mediaMinMax($minValue, $maxValue){
+    @media screen and (min-width:#{$minValue}px) and (max-width:#{$maxValue}px) {
+        @content;
+    }
+}
+
+// column(4, 10, 10, down ------ 한 줄의 개수, 상하 여백, 좌우 여백, 이전 사이즈 대비 한줄 개수 : up, down (null) - 이전사이즈가 4이고 현재 사이즈가 3이면 down.
+@mixin column($num_row, $margin-top, $margin-left, $responsive: null, $unit: px) {
+    $li_tot_margin: ($margin-left * ($num_row - 1));
+  
+    width: calc((100% - (#{$li_tot_margin}#{$unit} + 1px)) / #{$num_row});  // ie에서 깨져서 +1px
+    margin-left: #{$margin-left}#{$unit};
+  
+    &:nth-child(-n+#{$num_row}) {
+      margin-top: 0;
+    }
+    &:nth-child(n+#{($num_row + 1)}) { // 두번째 줄 부터 상단마진 적용
+      margin-top: #{$margin-top}#{$unit};
+    }
+  
+    @if $responsive == null { // 최초 1회만 적용
+      float: left;
+    }
+  
+    @if $responsive != null {
+      $res : -($responsive);
+      @if $responsive == "up" {
+        $res : -1;
+      }
+      @if $responsive == "down" {
+        $res : 1;
+      }
+      $num_row_before: $num_row + ($res);
+      &:nth-child(#{$num_row_before}n+1) {
+        clear: none;
+        margin-left: #{$margin-left}#{$unit};
+      }
+    }
+  
+    // 각 줄의 첫번째 좌측 마진 삭제
+    &:nth-child(#{$num_row}n+1) {
+      clear: both;
+      margin-left: 0;
+    }
+  }
+  
+// @include ellipsis1; ------ 한줄 텍스트 말줄임.
+@mixin ellipsis1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//@include elss(5, 1.5); ------  줄 수, line-height.
+@mixin elss($row, $line-height) {
+  $max: ($line-height * $row);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: #{$line-height}em;
+  max-height: #{$max}em !important;
+}
+
+//@include wan; ------ input, select, textarea 등의 기본스타일 제거.
+@mixin wan {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@mixin hoverEvent{
+  &:hover,
+  &:active,
+  &:focus{
+    @content;
+  }
+}
+ 
+@mixin transforms($val) {
+  -webkit-transform: ($val);
+  -moz-transform: ($val);
+  -o-transform: ($val);
+  -ms-transform: ($val);
+  transform: ($val);
+}
+
+@mixin translate($val,$val2) {
+  -moz-transform: translate($val,$val2);
+  -webkit-transform: translate($val,$val2);
+  -o-transform: translate($val,$val2);
+  transform: translate($val,$val2);
+}
+
+@mixin translateX($val) {
+  -moz-transform: translateX($val);
+  -webkit-transform: translateX($val);
+  -o-transform: translateX($val);
+  transform: translateX($val);
+}
+
+@mixin translateY($val) {
+  -moz-transform: translateY($val);
+  -webkit-transform: translateY($val);
+  -o-transform: translateY($val);
+  transform: translateY($val);
+}

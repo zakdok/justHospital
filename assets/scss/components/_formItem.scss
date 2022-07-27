@@ -1,0 +1,266 @@
+
+
+.input-label{
+    display:block; 
+    font-size:rem(16); 
+    font-weight:400; 
+    padding-bottom:.5rem;
+}
+.help-text{
+    display:block; 
+    margin-top: 0.7rem; 
+    font-size:rem(14); 
+    font-weight:normal;
+}
+
+
+/* Textarea
+-----------------------------------------------*/
+.textarea{
+    width:100%;
+    &:after{
+        @extend %clearFix;
+    }
+    textarea{
+        @extend %formStyles;
+        height:auto;
+        min-height:5rem; 
+        vertical-align:top;
+        overflow:auto; 
+        resize:none;
+        padding-top:.75rem;
+        padding-bottom:.75rem;
+    }
+    .textarea-num{
+        float:right;
+    }
+}
+
+
+/* Selects custom
+-----------------------------------------------*/
+.select{
+    width:100%;
+    select{
+        @extend %formStyles;
+        display:block; 
+    }
+}
+
+
+/* form checkbox / radio cusotm
+-----------------------------------------------*/
+$size : 13px;
+
+.form-check{
+    display:inline-block; 
+    position:relative; 
+    padding-left:20px; 
+    cursor:pointer; 
+    font-size:1rem; 
+    text-align:left; 
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select:none; 
+    user-select:none; 
+    vertical-align:top;
+    &.no-text{
+        padding-left:0;
+    }
+    &:hover{
+        input[type="radio"] ~ .checkmark,
+        input[type="checkbox"] ~ .checkmark{
+            background-color:#eee;
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"]{
+        opacity:0; 
+        position:absolute; 
+        cursor:pointer;
+        &:checked ~ .checkmark{
+            background-color:$color-main;
+            border:1px solid $color-main;
+            &:after{
+                display:block;
+            }
+        }
+        &:disabled ~ .checkmark{
+            background-color:#ddd;
+            &:after{
+                display:none;
+            }
+        }
+        &:disabled:checked ~ .checkmark{
+            background-color:rgba(213,63,65,.4);
+            &:after{
+                display:block;
+            }
+        }
+    }
+    input[type="radio"]{  
+        &  ~ .checkmark{
+            position: absolute; 
+            top:0;
+            left:0; 
+            height:$size; 
+            width:$size;
+            background-color:#efefef; 
+            border-radius:50%;
+            &:after{
+                content:""; 
+                position:absolute; 
+                display:none; 
+                top:5.4px; 
+                left:5.5px; 
+                width:5px; 
+                height:5px; 
+                border-radius:50%; 
+                background:white;
+            }
+        }
+    }
+
+    input[type="checkbox"]{
+        height: 0; 
+        width: 0;
+        & ~ .checkmark{
+            position:absolute; 
+            top:0; 
+            left:0; 
+            height:$size; 
+            width:$size;
+            background-color: #fff; 
+            border:1px solid #ddd;
+            &:after{
+                content:""; 
+                position:absolute; 
+                display:none; 
+                left:4px; 
+                top:0px; 
+                width:4px; 
+                height:8px; 
+                border:solid white; 
+                border-width:0 2px 2px 0; 
+                -webkit-transform:rotate(45deg);  
+                -ms-transform:rotate(45deg); 
+                transform:rotate(45deg);
+            }
+        }
+    }
+}
+
+ 
+
+
+/* switch cusotm
+-----------------------------------------------*/
+.switch{
+    position:relative; 
+    display:inline-block; 
+    padding-left:35px; 
+    margin:4px 0 4px 4px; 
+    font-size:1rem;
+
+    input[type=checkbox]{
+        height:0; 
+        width:0; 
+        visibility:hidden;
+        &:checked+label {
+            transition:all .4s ease-in-out; 
+            background-color:$color-main;
+            &:after{
+                left:37px; 
+                -webkit-transform:translateX(-100%); 
+                transform:translateX(-100%);
+            }
+        }
+        &:disabled+label {
+            background-color:#bbb;
+            &:after {
+                background-color:#ddd;
+            }
+        }
+    }
+    label {
+        transition:all .3s ease-in-out; 
+        position:absolute; 
+        top:0; 
+        left:0; 
+        display:block; 
+        width:35px; 
+        height:15px; 
+        background-color:#ddd; 
+        border-radius:2em;
+        text-indent:-9999px; 
+        cursor:pointer; 
+        &:after {
+            transition:all .3s ease-in-out; 
+            content:''; 
+            position:absolute; 
+            top:-2px; 
+            left:-2px; 
+            width:19px; 
+            height:19px; 
+            background-color:#fff; 
+            border-radius:50%; 
+            box-shadow:0 0 5px rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+/* File Uploads
+-----------------------------------------------*/
+.input-file{
+    &:after{
+        @extend %clearFix;
+    }
+    input[type=file]{ 
+        position:absolute; 
+        width:1px; 
+        height:1px; 
+        padding:0; 
+        margin:-1px; 
+        overflow:hidden; 
+        clip:rect(0,0,0,0); 
+        border:0; 
+        
+    }
+    label{
+        @extend %formStyles;
+        float:left;
+        display:block; 
+        width:80px;
+        color: #fff; 
+        font-size:inherit; 
+        line-height:3rem; 
+        text-align:center;
+        background-color: $color-main; 
+        cursor:pointer; 
+        border-top:1px solid $color-main;
+        border-bottom:1px solid $color-main;
+        border-radius:.25em;
+        border-top-left-radius: 0;
+        border-bottom-left-radius:0;
+        box-sizing:border-box;
+    }
+    .upload-name { 
+        @extend %formStyles;
+        float:left;
+        display:block; 
+        width:calc(100% - 80px);
+        font-size:inherit; 
+        font-family:inherit; 
+        line-height:normal; 
+        background-color: #f5f5f5; 
+        border-radius:.25em;
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+        -webkit-appearance:none; 
+        -moz-appearance:none; 
+        appearance: none;
+        box-sizing:border-box;
+    } 
+}
+

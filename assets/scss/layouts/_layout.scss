@@ -1,0 +1,29 @@
+.mark-info{
+    position: absolute;
+    top: -21px;
+    left: -16px;
+    width: auto;
+    text-align: center;
+    padding: 0 2em 0 2.75em;
+    min-width: 183px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 2em;
+    background-color: #0475f4;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    .icon-pos{
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: #fff url(/assets/img/icon-pos.png) no-repeat center;
+        background-size: 17px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,237 @@
+#sv{
+    position: relative;
+    left: 50%;
+    width: 1920px;
+    margin-left: -960px;
+}
+#sv .sv-area{}
+#sv .sv-area .bg-area{}
+#sv .sv-area .bg-area .bg-wrap{}
+#sv .sv-area .bg-area .bg-wrap .bg{
+    height: 0;
+    padding-bottom: 32.8125%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: -9999px;
+}
+#sv .sv-area .text-area{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+#sv .sv-area .text-area .title-wrap{}
+#sv .sv-area .text-area .title-wrap .en-title{
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+#sv .sv-area .text-area .title-wrap .title{
+    margin: 20px 0 0;
+}
+#sv .sv-area .text-area .title-wrap .title strong{}
+#sv .sv-area .text-area .text-wrap .text{
+    margin: 20px 0 0;
+    font-weight: 300;
+}
+#snb{
+    background-color: #fff;
+}
+#snb.sticky{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+#snb .snb-area{
+    position: relative;
+    padding-left: 95px;
+}
+#snb .snb-area .home-wrap{
+    position: absolute;
+    left: 50px;
+    top: 0;
+}
+#snb .snb-area .home-wrap .btn-wrap{}
+#snb .snb-area .home-wrap .btn-wrap .btn{
+    position: relative;
+    display: flex;
+    width: 45px;
+    height: 97px;
+    align-items: center;
+    justify-content: center;
+}
+#snb .snb-area .home-wrap .btn-wrap .btn::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: block;
+    width: 1px;
+    height: 18px;
+    margin-top: -10px;
+    background-color: #cdcdcd;
+}
+#snb .snb-area .home-wrap .btn-wrap .btn .ico-wrap{}
+#snb .snb-area .home-wrap .btn-wrap .btn .ico-wrap .ico{
+    transition: .25s;
+}
+#snb .snb-area .home-wrap .btn-wrap .btn .ico-wrap .ico:hover{
+    opacity: 0.7;
+}
+#snb .snb-area .home-wrap .btn-wrap .btn .ico-wrap .ico img{}
+#snb .snb-area .snb-list-area{}
+#snb .snb-area .snb-list-area .dep1-wrap{}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1-con{
+    position: relative;
+    float: left;
+    width: 50%;
+    max-width: 196px;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1-inner{}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1{
+    position: relative;
+    display: block;
+    padding: 0 24px;
+    overflow: hidden;
+    transition: .25s;
+    color: #666;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1-con:last-child .dep1{
+    color: #000;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: block;
+    width: 1px;
+    height: 18px;
+    margin-top: -10px;
+    background-color: #cdcdcd;
+    transition: .25s;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1-con.active .dep1,
+#snb .snb-area .snb-list-area .dep1-wrap .dep1:hover{
+    color: #fff !important;
+    background-color: #224c9f;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1-con.active .dep1::after,
+#snb .snb-area .snb-list-area .dep1-wrap .dep1:hover::after{
+    background-color: #224c9f;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 97px;
+    line-height: 97px;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area .text-wrap{}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area .text-wrap .title{
+    padding-right: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    word-break: break-all;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area .ico-wrap{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);
+    line-height: 1;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area .ico-wrap .ico{
+    transition: .25s;-moz-transition: .25s;-webkit-transition: .25s;-o-transition: .25s;
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1-con.active .dep1 .text-area .ico-wrap .ico{
+    transform: rotate(180deg);-moz-transform: rotate(180deg);-webkit-transform: rotate(180deg);-o-transform: rotate(180deg);
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1-con:hover .dep1 .text-area .ico-wrap .ico{
+    filter: invert(100%);
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area .ico-wrap .ico img{}
+#snb .snb-area .snb-list-area .dep2-area{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top-width: 0;
+    z-index: 99999;
+}
+#snb .snb-area .snb-list-area .dep2-area .dep2-wrap{}
+#snb .snb-area .snb-list-area .dep2-area .dep2-con{
+    border-top: 1px solid #e0e0e0;
+}
+#snb .snb-area .snb-list-area .dep2-area .dep2{
+    display: block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #717171;
+    font-weight: 400;
+    transition: .25s;
+    overflow: hidden;
+}
+#snb .snb-area .snb-list-area .dep2-area .dep2-con.active .dep2,
+#snb .snb-area .snb-list-area .dep2-area .dep2:hover{
+    background-color: #224c9f;
+    color: #fff;
+}
+@media all and (max-width:1200px){
+    #sv{
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+    }
+    #sv .sv-area .text-area .title-wrap .title{
+        margin: 10px 0 0;
+    }
+    #sv .sv-area .text-area .text-wrap .text{
+        margin: 10px 0 0;
+    }
+    #snb .snb-area{
+        padding-left: 30px;
+    }
+    #snb .snb-area .home-wrap{
+        left: 0;
+    }
+    #snb .snb-area .home-wrap .btn-wrap .btn{
+        width: 30px;
+        height: 40px;
+    }
+    #snb .snb-area .home-wrap .btn-wrap .btn img{
+        width: 15px;
+    }
+    #snb .snb-area .snb-list-area .dep1-wrap .dep1{
+        padding: 0 10px;
+    }
+    #snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area{
+        height: 40px;
+        line-height: 40px;
+    }
+    #snb .snb-area .snb-list-area .dep1-wrap .dep1 .text-area .text-wrap .title{
+        font-size: 13px;
+    }
+    #snb .snb-area .snb-list-area .dep2-area .dep2{
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width:486px){
+    #sv .sv-area .bg-area .bg-wrap .bg{
+        padding-bottom: 56.25%;
+    }
+}

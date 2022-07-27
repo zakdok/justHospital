@@ -1,0 +1,20 @@
+//calc system
+@function calcs($target, $container) {
+    @return ($target / $container) * 100%;
+}
+
+@function rem($n: $rootPx){
+    @return  #{$n / $rootPx}rem;
+}
+
+@function em($n : $rootPx){
+    @return  #{$n / $rootPx}em;
+}
+ 
+@function darkRGB($color){
+    @return $color - ($color / 10);
+}
+
+@function per($n , $n2){
+    @return #{$n * 100% / $n2};
+}

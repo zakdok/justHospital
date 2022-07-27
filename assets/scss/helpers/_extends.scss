@@ -1,0 +1,53 @@
+%clearFix:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+%formStyles{
+    width:100%;
+    height:3rem; 
+    padding:0 .75rem;
+    border:1px solid $color-grey;
+    border-radius:.25em;
+    &:hover,&:active,&:focus{
+        border-color: #555555;
+    }
+    &:disabled{
+        background-color:#f8f8f8; 
+        cursor: not-allowed;
+    }
+    &:read-only{
+        background-color:#f8f8f8;
+    }
+}
+
+%label{
+    position:relative;
+    display:inline-block;
+    text-align:center;
+    vertical-align: bottom;
+    height:36px;
+    padding:0 .75em;
+    line-height:36px;
+    font-size:1rem;
+    font-weight:300;
+    color:#fff;
+    border-radius:2em;
+}
+
+
+%label2{
+    position:relative;
+    display:inline-block;
+    text-align:center;
+    vertical-align: bottom;
+    width:76px;
+    height:30px;
+    line-height:30px;
+    font-size:1rem;
+    font-weight:600;
+    color:#fff;
+    border-radius:10px;
+    letter-spacing: -.5px;
+}

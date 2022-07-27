@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@import 
+    './helpers/_veriables.scss',
+    './helpers/_extends.scss',
+    './helpers/_mixins.scss',
+    './helpers/_functions.scss';
+
+@import 
+    './base/_reset.scss',
+    './base/_form.scss';
+@import 
+    './pages/_intro.scss';
+@import
+    './layouts/_layout.scss',
+    './layouts/_header.scss',
+    './layouts/_footer.scss';
+
+@import 
+    './components/_buttons.scss',
+    './components/_formItem.scss';
+
+    
+    
+
+    

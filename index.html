@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="/assets/plugin/swiper.min.css" />
+<link rel="stylesheet" href="https://rapture1004.cafe24.com/js/font-awesome/css/font-awesome.min.css?ver=191202">
+<link rel="stylesheet" href="https://rapture1004.cafe24.com/css/default.css?ver=191202">
+<link rel="stylesheet" href="/assets/css/style.css?ver=62e15b05730a0">
+<link rel="stylesheet" href="/assets/css/board.css?ver=62e15b05730a2">
+<link rel="stylesheet" href="/assets/css/sub.css?ver=62e15b05730a3">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosanskr.css">
+<script src="/assets/plugin/swiper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://rapture1004.cafe24.com/js/common.js?ver=191202"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+<div id="headerLayout"></div>
+    <section id="contents">
+    </section>
+<div id="footerLayout"></div>
+
+
+<!-- } 하단 끝 -->
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+  <script src="/assets/js/common.js?ver=191202"></script>
+    <script src="/assets/js/sub.js?ver=191202"></script>
+  
+
+</body>
+</html>
+<script>
+jQuery(function($){
+    $(document).ready(function(){
+        $('#headerLayout').load("./header.html");
+        $('#footerLayout').load("./footer.html");
+    });
+})
+</script>

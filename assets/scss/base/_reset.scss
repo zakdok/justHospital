@@ -1,0 +1,361 @@
+html,
+body{
+    font-size: #{$rootPx}px;
+    font-family: 'Noto Sans KR', 'Nanum Gothic', '굴림', sans-serif;
+    overflow-x:hidden;
+    color:#282828;
+    
+    -webkit-text-size-adjust: none; /*Chrome, Safari, newer versions of Opera*/
+    -moz-text-size-adjust: none; /*Firefox*/
+    -ms-text-size-adjust: none;  /*Ie*/
+    -o-text-size-adjust: none; /*old versions of Opera*/
+    text-size-adjust: none;
+
+    word-break: keep-all;
+}
+@media screen and (max-width: 1024px) {html,body{font-size: 15px;}}
+@media screen and (max-width: 560px) {html,body{font-size: 14px;}}
+@media screen and (max-width: 430px) {html,body{font-size: 13px;}}
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    line-height: 1;
+    
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+small {
+    display: block;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+mark {
+    background-color: #ff9;
+    color: #333;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img,
+fieldset {
+    border: 0;
+    vertical-align: baseline;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    vertical-align: baseline;
+    cursor:pointer;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+.blind {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+}
+
+caption.blind {
+    position: static;
+}
+
+
+/* 바로가기 */
+.skip,
+.skip a {
+  width:0px;
+  height:0px;
+  line-height:0;
+  border:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  font-size:0;
+  overflow:hidden;
+  z-index:100000;
+}
+.skip a {
+  &:focus,
+  &:active {
+    width:100%;
+    height:50px;
+    line-height:50px;
+    background:#21272e;
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none; 
+  }
+}
+
+/* 애니메이션 */
+.ani-top {
+  position: relative;
+  opacity: 0;
+  top: 25px;
+  transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  -webkit-transition-delay: .4s;
+  -o-transition-delay: .4s;
+  &.ani-finish {
+    top: 0;
+    opacity: 1;
+  }
+}
+.clearfix:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+b, strong{
+    font-weight: 600;
+}
+button{
+    cursor: pointer;
+    color: #282828;
+}
+.link__block{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.bg_gray{
+    background: #f5f5f5 !important;
+}
+.bg_white{
+    background: #ffffff !important;
+}
+.color-main{
+    color: $color-main;
+}
+.table__list{
+    display: table;
+    table-layout: fixed;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    border-spacing: 20px 0;
+    padding: 0 10px;
+}
+.w1600{
+    max-width: 1620px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.w1400{
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.paddingArticle{
+    width: 100%;
+    padding: rem(100) 0;
+}
+@media screen and (max-width: 1024px) {
+    .paddingArticle{
+        padding: rem(80) 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .paddingArticle{
+        padding: rem(60) 0;
+    }
+}
+@media screen and (max-width: 560px) {
+    .paddingArticle{
+        padding: rem(40) 0;
+    }
+}
+
+.br_on1400,.br_on1024,.br_on768,.br_on560,.br_on430{
+    display: none;
+}
+@media screen and (max-width: 1400px) {.br_on1400{display: block;}.br_close1400{display: none;}};
+@media screen and (max-width: 1024px) {.br_on1024{display: block;}.br_close1024{display: none;}};
+@media screen and (max-width: 768px) {.br_on768{display: block;}.br_close768{display: none;}};
+@media screen and (max-width: 560px) {.br_on560{display: block;}.br_close560{display: none;}};
+@media screen and (max-width: 430px) {.br_on430{display: block;}.br_close430{display: none;}};
+@media screen and (max-width: 370px) {.br_close370{display: none;}};
+@media screen and (max-width: 340px) {.br_close320{display: none;}};
+
+
+/* g market font */
+@font-face {
+    font-family: 'GmarketSans';
+    src: local('GmarketSans'),
+        url('/assets/fonts/GmarketSansBold.woff2') format('woff2'),
+        url('/assets/fonts/GmarketSansBold.woff') format('woff'),
+        url('/assets/fonts/GmarketSansBold.ttf') format('truetype'),
+        url('/assets/fonts/GmarketSansBold.eot') format('embedded-opentype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: local('GmarketSans'),
+        url('/assets/fonts/GmarketSansMedium.woff2') format('woff2'),
+        url('/assets/fonts/GmarketSansMedium.woff') format('woff'),
+        url('/assets/fonts/GmarketSansMedium.ttf') format('truetype'),
+        url('/assets/fonts/GmarketSansMedium.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: local('GmarketSans'),
+        url('/assets/fonts/GmarketSansLight.woff2') format('woff2'),
+        url('/assets/fonts/GmarketSansLight.woff') format('woff'),
+        url('/assets/fonts/GmarketSansLight.ttf') format('truetype'),
+        url('/assets/fonts/GmarketSansLight.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+  
+.font--gmarket{
+    font-family: 'GmarketSans','Noto Sans KR', 'Nanum Gothic', '굴림', sans-serif;
+}
+.font--monts{
+    font-family: 'Montserrat','GmarketSans', 'Noto Sans KR', sans-serif;
+}

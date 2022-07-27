@@ -1,0 +1,157 @@
+.footer{
+    width: 100%;
+    background-color: #282828;
+    text-align: center;
+    .topAr{
+        padding: rem(95) 0 rem(30);
+        border-bottom: 1px solid #797979;
+        .f-logo{
+            display: inline-block;
+            width: 287px;
+            img{
+                width: 100%;
+            }
+        }
+        .f-menu{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: rem(65);
+            > li{
+                padding: 0 rem(28);
+                &:nth-child(n + 2){
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        @include translateY(-50%);
+                        width: 1px;
+                        height: 15px;
+                        background-color: #d8d8d8;
+                    }
+                }
+                &:hover{
+                    opacity: .8;
+                }
+                a{
+                    font-size: rem(17);
+                    font-weight: 500;
+                    color: #ffffff;
+                    &.color1{
+                        color: #ffde01;
+                    }
+                }
+            }
+        }
+    }
+    .bottomAr{
+        padding: rem(50) 0 rem(75);
+        .info-area{
+            font-size: rem(15);
+            font-weight: 400;
+            line-height: 1.4;
+            color: #c1c1c1;
+            .ds18{
+                display: inline-block;
+                font-size: rem(18);
+                margin-bottom: rem(20);
+            }
+            .dsIB{
+                position: relative;
+                padding-left: 32px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 16px;
+                    top: 50%;
+                    @include translateY(-50%);
+                    width: 2px;
+                    height: 14px;
+                    background-color: #838383;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer{
+        .topAr{
+            padding: rem(50) 0 rem(20);
+            .f-logo{
+                width: 200px;
+            }
+            .f-menu{
+                margin-top: rem(30);
+                > li{
+                    padding: 0 rem(14);
+                    &:nth-child(n + 2){
+                        &::before{
+                            height: 9px;
+                        }
+                    }
+                    a{
+                        font-size: rem(15);
+                    }
+                }
+            }
+        }
+        .bottomAr{
+            padding: rem(30) 0 rem(75);
+            .info-area{
+                .ds18{
+                    font-size: rem(16);
+                }
+                .dsIB{
+                    padding-left: 24px;
+                    &.ds768{
+                        padding-left: 0;
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &::before{
+                        left: 12px;
+                        width: 1px;
+                        height: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    .footer{
+        .topAr{
+            padding: rem(30) 0 rem(20);
+            .f-logo{
+                width: 160px;
+            }
+            .f-menu{
+                > li{
+                    width: 50%;
+                    padding: rem(7) rem(10);
+                    &:nth-child(3){
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .bottomAr{
+            padding: rem(20) 0 rem(75);
+            .info-area{
+                .dsIB{
+                    &.ds430{
+                        padding-left: 0;
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
