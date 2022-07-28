@@ -39,6 +39,7 @@
 }
 #snb{
     background-color: #fff;
+    border-bottom: 1px solid #e7e1d9;
 }
 #snb.sticky{
     position: fixed;
@@ -100,6 +101,9 @@
     overflow: hidden;
     transition: .25s;
     color: #666;
+    font-family: 'GmarketSansLight';
+}
+#snb .snb-area .snb-list-area .dep1-wrap .dep1 span{
 }
 #snb .snb-area .snb-list-area .dep1-wrap .dep1-con:last-child .dep1{
     color: #000;
@@ -187,6 +191,178 @@
     background-color: #224c9f;
     color: #fff;
 }
+.s-title-area{
+    text-align: center;
+}
+.s-title-area .title-area{}
+.s-title-area .title-area .title-wrap{}
+.s-title-area .title-area .title-wrap .en-title{
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+.s-title-area .title-area .title-wrap .title{
+    margin: 30px 0 0;
+}
+.s-title-area .text-area{
+    margin: 35px 0 0;
+}
+.s-title-area .text-area .text-wrap{}
+.s-title-area .text-area .text-wrap .text.text-blue{
+    color: #1f2d4a;
+}
+.s-title-area .text-area .text-wrap .text strong{}
+.s-title-area .text-area .text-wrap .text2{
+    margin: 12px 0 0;
+    font-weight: 300;
+}
+.s-title-area .text-area .text-wrap .text2 strong{
+    font-weight: 500;
+}
+.s3111{
+    padding: 0 0 130px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.s3111 .area{}
+.s3111 .area .num-list-area{
+    text-align: center;
+}
+.s3111 .area .num-list-area .list-wrap{
+    font-size: 0;
+}
+.s3111 .area .num-list-area .list-wrap .list-con{
+    display: inline-block;
+    width: 25%;
+    border: 1px solid #e0e0e0;
+    border-right-width: 0;
+    background-color: #fff;
+    vertical-align: text-top;
+}
+.s3111 .area .num-list-area .list-wrap .list-con:last-child{
+    border-right-width: 1px;
+}
+.s3111 .area .num-list-area .list-wrap .list-inner{
+    display: flex;
+    height: 409px;
+    padding: 126px 0 0;
+    align-items: flex-start;
+    justify-content: center;
+}
+.s3111 .area .num-list-area .list-wrap .content-text-area{}
+.s3111 .area .num-list-area .list-wrap .content-text-area .num-area{}
+.s3111 .area .num-list-area .list-wrap .content-text-area .num-area .num-wrap{
+    font-size: 0;
+}
+.s3111 .area .num-list-area .list-wrap .content-text-area .num-area .num{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #1f2d4a;
+    border-radius: 50%;
+    color: #fff;
+}
+.s3111 .area .num-list-area .list-wrap .content-text-area .text-area{
+    margin: 35px 0 0;
+}
+.s3111 .area .num-list-area .list-wrap .content-text-area .text-area .text-wrap{}
+.s3111 .area .num-list-area .list-wrap .content-text-area .text-area .text{
+    font-weight: 300;
+}
+.s3111 .area .chk-list-area{
+    max-width: 1230px;
+    margin: 0 auto;
+}
+.s3111 .area .chk-list-area .list-wrap{
+    margin: -14px -10px 0;
+    font-size: 0;
+}
+.s3111 .area .chk-list-area .list-wrap .list-con{
+    display: inline-block;
+    width: 50%;
+    padding: 14px 10px 0;
+    vertical-align: text-top;
+}
+.s3111 .area .chk-list-area .list-wrap .list-inner{
+    background-color: #fff;
+    padding: 9px 11px;
+    border-radius: 50px;
+}
+.s3111 .area .chk-list-area .list-wrap .content-text-area{
+    display: flex;
+    align-items: center;
+}
+.s3111 .area .chk-list-area .list-wrap .content-text-area .ico-area{
+    margin-right: 35px;
+}
+.s3111 .area .chk-list-area .list-wrap .content-text-area .ico-area .ico-wrap{}
+.s3111 .area .chk-list-area .list-wrap .content-text-area .ico-area .ico{
+    width: 61px;
+    height: 61px;
+    line-height: 61px;
+    background-color: #1f2d4a;
+    border-radius: 50%;
+    text-align: center;
+}
+.s3111 .area .chk-list-area .list-wrap .content-text-area .ico-area .ico img{
+    vertical-align: middle;
+}
+.s3111 .area .chk-list-area .list-wrap .content-text-area .text-area{}
+.s3111 .area .chk-list-area .list-wrap .content-text-area .text-area .text-wrap{}
+.s3111 .area .chk-list-area .list-wrap .content-text-area .text-area .text{
+    font-weight: 300;
+    color: #1f2d4a;
+}
+.p-area{
+    padding: 140px 0 130px;
+}
+.pb0{
+    padding-bottom: 0 !important;
+}
+.bgc-gray{
+    background-color: #f7f7f7;
+}
+.s3112{}
+.s3112 .area{}
+.s3112 .area .box-list-area{}
+.s3112 .area .box-list-area .list-wrap{
+    margin: -12px -6px 0;
+    text-align: center;
+    font-size: 0;
+}
+.s3112 .area .box-list-area .list-con{
+    display: inline-block;
+    width: 33.33%;
+    padding: 12px 6px 0;
+    vertical-align: text-top;
+}
+.s3112 .area .box-list-area .list-inner{
+    background-color: #fff;
+}
+.s3112 .area .box-list-area .content-text-area{}
+.s3112 .area .box-list-area .content-text-area .title-area{
+    padding: 26px 0;
+    background-color: #1f2d4a;
+    color: #fff;
+}
+.s3112 .area .box-list-area .content-text-area .title-area .title-wrap{}
+.s3112 .area .box-list-area .content-text-area .title-area .title{}
+.s3112 .area .box-list-area .content-text-area .text-area{
+    display: flex;
+    height: 199px;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: center;
+}
+.s3112 .area .box-list-area .content-text-area .text-area .text-wrap{}
+.s3112 .area .box-list-area .content-text-area .text-area .text{
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+.s3112 .area .box-list-area .content-text-area .text-area .text strong{
+    font-weight: 500;
+}
+
 @media all and (max-width:1200px){
     #sv{
         left: 0;
@@ -227,6 +403,102 @@
         height: 30px;
         line-height: 30px;
         font-size: 12px;
+    }
+    .s3111{
+        padding: 50px 10px;
+        background-size: cover;
+        background-position: 25% 50%;
+    }
+    .s3111 .area{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .s3111 .area .num-list-area{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .s3111 .area .num-list-area .list-wrap .list-con{
+        width: 100%;
+        border-top-width: 0;
+    }
+    .s3111 .area .num-list-area .list-wrap .list-con:nth-child(1){
+        border-top-width: 1px;
+    }
+    .s3111 .area .num-list-area .list-wrap .list-inner{
+        height: auto;
+        padding: 20px 20px;
+        align-items: center;
+    }
+    .s3111 .area .num-list-area .list-wrap .content-text-area .num-area .num{
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .s3111 .area .num-list-area .list-wrap .content-text-area .text-area{
+        margin: 15px 0 0;
+    }
+    .s3111 .area .chk-list-area{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .s3111 .area .chk-list-area .list-wrap{
+        margin: -10px 0 0;
+    }
+    .s3111 .area .chk-list-area .list-wrap .list-con{
+        width: 100%;
+        padding: 10px 0 0;
+    }
+    .s3111 .area .chk-list-area .list-wrap .list-inner{
+        padding: 5px 10px;
+    }
+    .s3111 .area .chk-list-area .list-wrap .content-text-area .ico-area{
+        margin-right: 10px;
+    }
+    .s3111 .area .chk-list-area .list-wrap .content-text-area .ico-area .ico{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .s3111 .area .chk-list-area .list-wrap .content-text-area .ico-area .ico img{
+        width: 12px;
+    }
+    .p-area{
+        padding: 100px 0 90px;
+    }
+}
+
+@media all and (max-width: 1024px){
+    .none1024{
+        display: none !important;
+    }
+    .s-title-area .title-area .title-wrap .title{
+        margin: 15px 0 0;
+    }
+    .s-title-area .text-area{
+        margin: 20px 0 0;
+    }
+    .s-title-area .text-area .text-wrap .text2{
+        margin: 7px 0 0;
+    }
+    .s3112 .area{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .s3112 .area .box-list-area .list-con{
+        width: 100%;
+    }
+    .s3112 .area .box-list-area .content-text-area .title-area{
+        padding: 20px 0;
+    }
+    .s3112 .area .box-list-area .content-text-area .text-area{
+        height: auto;
+        padding: 40px 20px;
+    }
+}
+
+@media all and (max-width: 768px){
+    .p-area{
+        padding: 70px 0;
     }
 }
 
